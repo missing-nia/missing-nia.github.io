@@ -1,0 +1,30 @@
+.lightbox .lb-outerContainer video {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 9999;
+	width: 100%;
+	height: auto;
+	opacity: 1;
+	transition: opacity 300ms ease-in-out;
+	border: none;
+	outline: none;
+}
+
+	.lightbox .lb-outerContainer video:hover, .lightbox .lb-outerContainer video:focus {
+		border: none;
+		outline: none;
+	}
+
+.lightbox .lb-outerContainer.animating video {
+	opacity: 0;
+}
+
+.lightbox .lb-container {
+	position: relative;
+}
+
+	.lightbox .lb-container .lb-image {
+		border: none;
+	}
