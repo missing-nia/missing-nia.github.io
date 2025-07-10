@@ -1,0 +1,91 @@
+<!DOCTYPE HTML>
+<!--
+	Stellar by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+<head>
+	<title>RougeLite Indev</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<link rel="stylesheet" href="assets/css/lightbox.min.css">
+	<link rel="stylesheet" href="assets/css/lightbox-video.css">
+	<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+</head>
+
+<body class="is-preload">
+
+	<!-- Wrapper -->
+	<div id="wrapper">
+
+		<!-- Header -->
+		<header id="header">
+			<h1>RougeLite Indev</h1>
+		</header>
+
+		<!-- Main -->
+		<div id="main">
+
+			<!-- Content -->
+			<section id="content" class="main"> 
+				<p>This project is a RougeLite I am working on with some associates, with me currently being the sole programmer on the team. Although the game is still early in development, I have done extensive work so far on various gameplay systems and mechanics, such as level generation, pathfinding, enemy AI, buffs/debuffs, and more.</p>
+				<p>Assets are largely placeholders or work in progress as the project is still very early in development.</p>
+				<h2>Dungeon Generation Demonstration</h2>
+                <p>Showcase of my dungeon generation for several random seeds. Dungeon is generated iteratively using an array to manage occupied room coordinates to prevent overlaps and other errors. Currently generates a spawn room, an exit, a relic room, and several randomized filler rooms. After room generation, room connections are determined and doors are added, with walls filling in unused connection spaces on the tilemaps (shown in the second demo video).</p>
+				<div class="box alt">
+					<div class="row gtr-uniform">
+						<div class="col-4"><span class="image fit"><a href="images/rlmov01_thumbnail.png" data-href="images/rlmov01.mp4" data-lightbox="videos"><img src="images/rlmov01_thumbnail.png" alt="" /></a></span></div>
+                        <div class="col-4"><span class="image fit"><a href="images/rlmov02_thumbnail.png" data-href="images/rlmov02.mp4" data-lightbox="videos"><img src="images/rlmov02_thumbnail.png" alt="" /></a></span></div>
+					</div>
+				</div>
+                <h2>Enemy AI</h2>
+                <p>Currently there are three enemy types, with one being a simple pathfinder to the player, and the other two (wolf and bird) being more complex. The wolf AI (white circle) will roam aimlessly unless the player enters its aggro range where it will begin performing charged attacks. Bird (blue circle) tracks the player and attempts to find a line-of-sight before firing. Enemy pathfinding is handled using the Theta* pathfinding algorithm (modification of A*)</p>
+				<div class="box alt">
+					<div class="row gtr-uniform">
+						<div class="col-4"><span class="image fit"><a href="images/rlmov03_thumbnail.png" data-href="images/rlmov03.mp4" data-lightbox="videos"><img src="images/rlmov03_thumbnail.png" alt="" /></a></span></div>
+                        <div class="col-4"><span class="image fit"><a href="images/rlmov04_thumbnail.png" data-href="images/rlmov04.mp4" data-lightbox="videos"><img src="images/rlmov04_thumbnail.png" alt="" /></a></span></div>
+                        <div class="col-4"><span class="image fit"><a href="images/rlmov05_thumbnail.png" data-href="images/rlmov05.mp4" data-lightbox="videos"><img src="images/rlmov05_thumbnail.png" alt="" /></a></span></div>
+					</div>
+				</div>
+                <h2>Buffs and Debuffs</h2>
+                <p>Buffs (and debuffs) are handled on update ticks, with buffs being applied, reapplied, and removed at fixed intervals via event triggers. Player buffs show up in the bottom left corner, with the player able to see a description for each using a keybind. Debuffs appear over the healthbar of enemies via a mini icon.</p>
+                <p>Buffs showcased are Adrenaline (speed boost for a few seconds when entering a room), Boiling Blood (stacking damage up on kill), and Poison (ticking damage over time).</p>
+				<div class="box alt">
+					<div class="row gtr-uniform">
+						<div class="col-4"><span class="image fit"><a href="images/rlmov06_thumbnail.png" data-href="images/rlmov06.mp4" data-lightbox="videos"><img src="images/rlmov06_thumbnail.png" alt="" /></a></span></div>
+                        <div class="col-4"><span class="image fit"><a href="images/rlmov07_thumbnail.png" data-href="images/rlmov07.mp4" data-lightbox="videos"><img src="images/rlmov07_thumbnail.png" alt="" /></a></span></div>
+                        <div class="col-4"><span class="image fit"><a href="images/rlmov08_thumbnail.png" data-href="images/rlmov08.mp4" data-lightbox="videos"><img src="images/rlmov08_thumbnail.png" alt="" /></a></span></div>
+					</div>
+				</div>
+				<ul class="actions">
+					<li><a href="index.html" class="button">Back</a></li>
+				</ul>
+			</section>
+		</div>
+
+		<!-- Footer -->
+		<footer id="footer">
+			<ul class="icons">
+				<li><a href="https://www.linkedin.com/in/ardenprado/" class="icon brands fa-linkedin alt"><span class="label">LinkedIn</span></a></li>
+				<li><a href="https://github.com/missing-nia" class="icon brands fa-github alt"><span class="label">GitHub</span></a></li>
+			</ul>
+			<p class="copyright">&copy; Arden Prado. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+		</footer>
+
+	</div>
+
+	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/jquery.scrollex.min.js"></script>
+	<script src="assets/js/jquery.scrolly.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+	<script src="assets/js/lightbox-plus-jquery.min.js"></script>
+	<script src="assets/js/lightbox-video.js"></script>
+
+</body>
+</html>
